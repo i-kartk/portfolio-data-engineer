@@ -1,0 +1,415 @@
+@font-face {
+    font-family: general-med;
+    src: url(./assets/fonts/GeneralSans-Medium.woff);
+}
+@font-face {
+    font-family: general-reg;
+    src: url(./assets/fonts/GeneralSans-Medium.woff);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: general-med;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+.mini-circle{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    z-index: 999999;
+    background: white;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#main{
+    width: 100%;
+    height: auto;
+    background-color:black;
+}
+
+.landing{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+nav{
+    width: 100%;
+    color: #f1f1f1;
+    font-size: 1.3vw;
+    padding:1.5rem 2.78vw;
+    font-family: general-Med;
+    font-weight: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a{
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.bounding{
+    width: fit-content;
+    overflow: hidden;
+
+}
+
+.bounding-elem{
+    transform: translateY(100%);
+}
+.landing-heading{
+    position: relative;
+    width: 100%;
+    margin-top: 5.9vw;
+    padding-bottom: 1.39vw;
+    padding-left: 2.78vw;
+    padding-right: 2.78vw;
+    color: #f1f1f1;
+}
+
+.landing-heading h1{
+    font-weight: 900;
+    font-family: general-Reg;
+    font-size: 8vw;
+    text-transform: uppercase;
+    line-height: .9;
+    opacity: .6;
+}
+
+.landing-heading-inner{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.landing-heading-inner h1{
+    margin-left: 200px;
+}
+
+.landing-heading-inner>h5{
+    text-transform: uppercase;
+    text-align: right;
+    color: #f1f1f1;
+    font-weight: 300;
+    font-size: 1.3vw;
+    margin-top: 10px;
+}
+
+
+.landing-heading-2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 1.2vh 2.78vw;
+    margin-top: 60px;
+}
+.landing-heading-2 h5{
+    color: #f1f1f1;
+    text-decoration: none;
+    font-size: 1.3vw;
+    padding: 1.1vh 0;
+    text-transform: uppercase;
+    font-family: general-med;
+}
+
+.landing-footer{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    padding: 1.2vh 2.78vw;
+}
+
+.landing-footer a{
+    color: #f1f1f1;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.2vw;
+}
+
+.ri-arrow-right-up-line{
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 1.8vw;
+}
+
+
+.landing-footer a:hover i {
+    transform: rotate(45deg); /* Rotate the icon to 0 degrees on hover */
+}
+
+.scroll-icons{
+    width: fit-content;
+    color: #f1f1f1;
+    display: flex;
+    gap: 5px;
+}
+
+.circle{
+    height: 25px;
+    width: 25px;
+    background-color: white;
+    opacity: .6 ;
+    color: black;
+    font-size: 1.3vw;
+    font-weight: 600;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.circle i {
+    font-size: 18px;
+    position: absolute;
+    transition: transform 0.4s ease;
+}
+
+.circle:hover i {
+    animation: moveDownUp 0.6s ease-in-out forwards;
+}
+
+
+@keyframes moveDownUp {
+ 
+    0% {
+        transform: translateY(0); /* Start at center */
+    }
+    50% {
+        transform: translateY(100%); /* Move downward */
+    }
+    51% {
+        transform: translateY(-100%); /* Instantly jump to above the circle */
+    }
+    100% {
+        transform: translateY(0); /* Move back to center from above */
+    }
+}
+
+.under-animation{
+    position: relative;
+    color: white;
+    text-decoration: none;
+
+    &:hover{ 
+    color: white;
+    }
+  }
+  
+  .under-animation::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+
+  .under-animation:hover::before {
+    transform: scaleX(1);
+  }
+
+.page-2{
+    padding-right: 10vw;
+    padding-left: 1vh;
+    padding-top: 150px;
+    height: 120vh;
+    width: 100%;
+    background-color: black;
+    text-decoration: none;
+}
+
+.head{
+    position: relative;
+    color: white;
+    padding: 20px;
+} 
+
+
+.element {
+    position: relative;
+    width: 100%;
+    padding: 5vh 2.7vw;
+    padding-right: 0;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #909090;
+}
+
+.element a{
+    width: 100%;
+   text-decoration: none;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.element h1{
+    font-weight: 100;
+    font-size: 7vw;
+    text-transform: uppercase;
+    opacity: 0.5;
+}
+
+
+.last-element {
+    border-bottom: 1px solid #909090;
+
+}
+
+.element img{
+    position:absolute;
+    height: 140%;
+    z-index: 99;
+    opacity: 0;
+    transform: translate(-50%, -50%); 
+    pointer-events: none;
+}
+
+
+
+
+.page-3 {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    color: #fff;
+    padding: 30vw 10vw;
+    padding-left: 40vw;
+    width: 100%;
+    background-color: black;
+}
+
+.page-3-text {
+    width: 25rem;
+}
+
+.page-3-text h5 {
+    text-transform: uppercase;
+    opacity: .6;
+    margin-bottom: 10px;
+}
+
+.page-3-text p {
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.page-3 img {
+    width: 200px;
+}
+
+.page-3-text a {
+    padding: 12px 22px;
+    border: 1px solid #fff;
+    border-radius: 100px;
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effects */
+}
+
+.page-3-text > a:hover,
+.page-3-text > a:focus {
+    background-color: white;
+    color: black;
+}
+
+.subscribe{
+    color: white;
+    padding: 20px 30px;
+    background: black;
+    padding-bottom: 7vw;
+
+}
+
+.subscribe>h5{
+    text-transform: uppercase;
+    opacity: .6;
+    font-weight: 100;
+
+}
+
+.subscribe>h3{
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-top: 7px;
+    font-weight: 100;
+}
+
+.footer{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    color: white;
+    text-transform: uppercase;
+    position: relative; /* Ensure the footer itself is positioned relative */
+    z-index: 1;
+}
+
+.footer-left{
+    display: flex;
+    gap: 20px;
+    
+}
+
+.footer-left>h5{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.footer-right{
+    display: flex;
+    gap: 40px;
+
+}
+
+.footer-right>a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+
+.credit {
+    color: white;
+    font-size: .8vw;
+    height: 2vh;
+    opacity: .5;
+    text-align: right;
+    padding-left: 2.5vw;
+    margin-right: 30px;
+    position: absolute; /* Absolute positioning for the credit */
+    right: 0;
+    bottom: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
